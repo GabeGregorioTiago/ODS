@@ -1,12 +1,9 @@
 import React,{useState} from "react";
-import SaudeOne from "../Figures/Saude1.png"
-import SaudeTwo from "../Figures/Saude2.png"
-import EducacaoOne from "../Figures/Educacao1.png"
-import EducacaoTwo from "../Figures/Educacao2.png"
-import AguaOne from "../Figures/agua1.png"
-import AguaTwo from "../Figures/Agua2.png"
-import TrabalhoOne from "../Figures/trabalho1.png"
-import TrabalhoTwo from "../Figures/trabalho2.png"
+import CidadeOne from "../Figures/Cidades1.png"
+import CidadeTwo from "../Figures/CIdades2.png"
+import IgualdadeOne from "../Figures/Igualdade1.png"
+import IgualdadeTwo from "../Figures/Igualdade2.png"
+
 import * as S from "../Styles/ODS-Styles"
 const ODS =()=>{
     
@@ -17,42 +14,26 @@ const ODS =()=>{
     const ChangeOne = ()=>{
           setOpenOne(!openOne);
           setOpenTwo(false);
-          setOpenThree(false);
-          setOpenFour(false);
+         
     };
     const ChangeTwo = ()=>{
         setOpenOne(false);
-        setOpenThree(false);
-          setOpenFour(false);
+       
         setOpenTwo(!openTwo);
   };
-  const ChangeThree = ()=>{
-    setOpenOne(false);
-    setOpenTwo(false);
-  
-    setOpenFour(false);
-    setOpenThree(!openThree);
-};
-const ChangeFour = ()=>{
-    setOpenOne(false);
-    setOpenTwo(false);
-    setOpenThree(false);
-   
-    setOpenFour(!openFour);
-};
+ 
     return(
               <S.BODY>
                      <h1>Os Objetivos de Desenvolvimento Sustentável em Barra Mansa</h1>
                       <S.DIV>
-                      <S.IMG onClick={()=>{ChangeOne()}} src={SaudeOne}/>
-                      <S.IMG onClick={()=>{ChangeTwo()}} src={EducacaoOne}/>
-                      <S.IMG onClick={()=>{ChangeThree()}} src={AguaOne}/>
-                      <S.IMG onClick={()=>{ChangeFour()}} src={TrabalhoOne}/>
+                      <S.IMG onClick={()=>{ChangeOne()}} src={IgualdadeOne}/>
+                      <S.IMG onClick={()=>{ChangeTwo()}} src={CidadeOne}/>
+                      
                       </S.DIV>
                   
                
                <S.DIVONE>
-               {openOne && openTwo==false && openThree==false && openFour==false && (
+               {openOne && openTwo==false  && (
                      
                            
                         <S.DIVTWO>
@@ -60,9 +41,14 @@ const ChangeFour = ()=>{
                               <button onClick={()=>{setOpenOne(false)}}>X</button>
                             </div>
                               <div>
-                              <img src={SaudeTwo}/>
+                              <img src={IgualdadeTwo}/>
                              </div>   
-                              
+                              <S.DIVFOUR>
+                                 <h3>Objetivo 10. Reduzir a desigualdade dentro dos países e entre eles</h3>
+                                 <p>Barra Mansa assina o Pacto de Combate ao Racismo e Promoção da Igualdade Racial.    <a href="https://www.barramansa.rj.gov.br/barra-mansa-assina-o-pacto-de-combate-ao-racismo-e-promocao-da-igualdade-racial/">Saiba mais aqui!</a></p>
+                                
+                                 
+                              </S.DIVFOUR>
                             
                            
                         </S.DIVTWO>
@@ -73,7 +59,7 @@ const ChangeFour = ()=>{
                
                   
                <S.DIVTHREE>
-               {openTwo && openOne==false && openThree==false && openFour==false && (
+               {openTwo && openOne==false  && (
                      
                            
                         <S.DIVTWO>
@@ -81,11 +67,17 @@ const ChangeFour = ()=>{
                               <button onClick={()=>{setOpenTwo(false)}}>X</button>
                             </div>
                               <div>
-                              <img src={EducacaoTwo}/>
+                              <img src={CidadeTwo}/>
                              </div>   
                               
                             
-                           
+                             <S.DIVFOUR>
+                                 <h3>Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis</h3>
+                                 <p>Sesc Barra Mansa recebe atividades certificadas pela ONU Habitats <a href="https://avozdacidade.com/wp/sesc-barra-mansa-recebe-atividades-certificadas-pela-onu-habitats/">Saiba mais aqui!</a></p>
+                                
+                                 
+                              </S.DIVFOUR>
+                            
                         </S.DIVTWO>
                            
                      
@@ -93,44 +85,7 @@ const ChangeFour = ()=>{
                </S.DIVTHREE>
                
                         
-               <S.DIVFOUR>
-               {openThree && openOne==false && openTwo==false && openFour==false && (
-                     
-                           
-                        <S.DIVTWO>
-                            <div>
-                              <button onClick={()=>{setOpenThree(false)}}>X</button>
-                            </div>
-                              <div>
-                              <img src={AguaTwo}/>
-                             </div>   
-                              
-                            
-                           
-                        </S.DIVTWO>
-                           
-                     
-               )}
-               </S.DIVFOUR>
-               <S.DIVFIVE>
-               {openFour && openOne==false && openTwo==false && openThree==false && (
-                     
-                           
-                        <S.DIVTWO>
-                            <div>
-                              <button onClick={()=>{setOpenFour(false)}}>X</button>
-                            </div>
-                              <div>
-                              <img src={TrabalhoTwo}/>
-                             </div>   
-                              
-                            
-                           
-                        </S.DIVTWO>
-                           
-                     
-               )}
-               </S.DIVFIVE>
+             
               </S.BODY>
             
                  
